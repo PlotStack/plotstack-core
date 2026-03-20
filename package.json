@@ -13,6 +13,7 @@
     "./utils": "./dist/utils/index.js"
   },
   "scripts": {
+    "prepare": "tsup src/index.ts --format esm --dts",
     "build": "tsup src/index.ts --format esm --dts",
     "dev": "tsup src/index.ts --format esm --dts --watch",
     "test": "vitest run",
@@ -20,11 +21,11 @@
     "lint": "eslint src/"
   },
   "dependencies": {
-    "zod": "^3.24.0"
+    "zod": "^3.24.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.7.0"
   },
   "devDependencies": {
-    "tsup": "^8.3.0",
-    "typescript": "^5.7.0",
     "vitest": "^3.0.0",
     "eslint": "^9.0.0"
   }
